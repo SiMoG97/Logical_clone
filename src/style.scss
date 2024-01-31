@@ -395,7 +395,7 @@ footer {
 }
 
 .screen1 {
-  --starting-y: 70;
+  --starting-y: 35;
   width: calc(
     1% * 50 + 1% * clamp(0, var(--scroll) * 50 / (var(--sticky-dis) + 10), 50)
   );

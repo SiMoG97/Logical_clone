@@ -395,6 +395,7 @@ footer {
 }
 
 .screen1 {
+  --starting-y: 70;
   width: calc(
     1% * 50 + 1% * clamp(0, var(--scroll) * 50 / (var(--sticky-dis) + 10), 50)
   );
@@ -402,7 +403,14 @@ footer {
     width: 100%;
   }
   transform: translateY(
-    calc(50% - 1% * clamp(0, var(--scroll) * 50 / var(--sticky-dis), 50))
+    calc(
+      1% * var(--starting-y) - 1% *
+        clamp(
+          0,
+          var(--scroll) * var(--starting-y) / var(--sticky-dis),
+          var(--starting-y)
+        )
+    )
   );
 }
 
